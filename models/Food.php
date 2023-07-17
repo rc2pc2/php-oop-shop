@@ -21,7 +21,7 @@ class Food extends Product {
         return $this->fats;
     }
 
-    private function setCalories(Int $calories) : void {
+    protected function setCalories(Int $calories) : void {
         if ($calories < 0){
             $calories = 0;
         }
@@ -29,7 +29,7 @@ class Food extends Product {
         $this->calories = $calories;
     }
 
-    private function setFats(Int $fats) : void {
+    public function setFats(Int $fats) : void {
         $this->calories = $fats;
     }
 }
