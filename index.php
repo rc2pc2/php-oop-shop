@@ -40,9 +40,9 @@
                             if (get_class($product) === 'Food'){
                         ?>
                             <h6 class="card-subtitle mb-2 text-body-secondary">
-                                Calories : <?php echo $product->calories; ?>
+                                Calories : <?php echo $product->getCalories(); ?>
                                 <br>
-                                Fats : <?php echo $product->fats; ?>
+                                Fats : <?php echo $product->getFats(); ?>
                             </h6>
                         <?php } elseif (get_class($product) === 'Toy'){
                         ?>
