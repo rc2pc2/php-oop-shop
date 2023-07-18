@@ -1,16 +1,20 @@
 <?php
 
 include_once __DIR__ . '/Product.php';
-
+include_once __DIR__ . '/traits/AgeGroup.php';
 
 class Food extends Product {
+    use AgeGroup;
+
     protected $calories;
     protected $fats;
 
-    function __construct(String $name,String $description,Float $price, String $image, Bool $inStock, Category $category, Int $quantity, Int $calories, Int $fats){
-        parent::__construct($name, $description, $price, $image, $inStock, $category, $quantity);
+    function __construct(String $name,String $description,Float $price, String $image, Bool $inStock, Category $category, Int $quantity, Int $shelfNo, String $laneNo, Int $calories, Int $fats, Int $minAge, Int $maxAge){
+        parent::__construct($name, $description, $price, $image, $inStock, $category, $quantity, $shelfNo, $laneNo);
         $this->setCalories($calories);
         $this->setFats($fats);
+        $this->minAge = $minAge;
+        $this->maxAge = $maxAge;
     }
 
     public function getCalories() : Int {

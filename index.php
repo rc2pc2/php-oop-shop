@@ -25,7 +25,10 @@
             </div>
         </div>
         <div class="row justify-content-around">
-            <?php foreach ($products as $product) {?>
+            <?php foreach ($products as $product) {
+                var_dump($product);
+                ?>
+
                 <div class="card col-3 m-4 p-0">
                     <img src="<?php echo $product->image; ?>" class="product-image" alt="<?php echo $product->name; ?>">
                     <div class="card-body flex-column">
@@ -57,9 +60,6 @@
                         <p class="card-text">
                             <?php echo $product->description; ?>
                         </p>
-
-
-
 
                         <p class="card-text">
                             <?php echo $product->description; ?>
