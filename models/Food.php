@@ -30,6 +30,6 @@ class Food extends Product {
     }
 
     public function setFats(Int $fats) : void {
-        $this->calories = $fats;
+        $this->fats = $fats;
     }
 }
